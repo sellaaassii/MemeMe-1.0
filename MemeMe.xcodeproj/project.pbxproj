@@ -13,10 +13,11 @@
 		8F79398E243157C400623E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F79398C243157C400623E64 /* Main.storyboard */; };
 		8F793990243157C800623E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F79398F243157C800623E64 /* Assets.xcassets */; };
 		8F793993243157C800623E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F793991243157C800623E64 /* LaunchScreen.storyboard */; };
+		8F79399B243455D700623E64 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79399A243455D700623E64 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F793983243157C400623E64 /* ImagePickerTings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePickerTings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F793983243157C400623E64 /* MemeMe 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MemeMe 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F793986243157C400623E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F793988243157C400623E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8F79398A243157C400623E64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +25,7 @@
 		8F79398F243157C800623E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F793992243157C800623E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F793994243157C800623E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F79399A243455D700623E64 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,7 @@
 		8F79397A243157C400623E64 = {
 			isa = PBXGroup;
 			children = (
-				8F793985243157C400623E64 /* ImagePickerTings */,
+				8F793985243157C400623E64 /* MemeMe */,
 				8F793984243157C400623E64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +50,32 @@
 		8F793984243157C400623E64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F793983243157C400623E64 /* ImagePickerTings.app */,
+				8F793983243157C400623E64 /* MemeMe 1.0.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8F793985243157C400623E64 /* ImagePickerTings */ = {
+		8F793985243157C400623E64 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
 				8F793986243157C400623E64 /* AppDelegate.swift */,
 				8F793988243157C400623E64 /* SceneDelegate.swift */,
 				8F79398A243157C400623E64 /* ViewController.swift */,
+				8F79399A243455D700623E64 /* Meme.swift */,
 				8F79398C243157C400623E64 /* Main.storyboard */,
 				8F79398F243157C800623E64 /* Assets.xcassets */,
 				8F793991243157C800623E64 /* LaunchScreen.storyboard */,
 				8F793994243157C800623E64 /* Info.plist */,
 			);
-			path = ImagePickerTings;
+			path = MemeMe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F793982243157C400623E64 /* ImagePickerTings */ = {
+		8F793982243157C400623E64 /* MemeMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F793997243157C800623E64 /* Build configuration list for PBXNativeTarget "ImagePickerTings" */;
+			buildConfigurationList = 8F793997243157C800623E64 /* Build configuration list for PBXNativeTarget "MemeMe" */;
 			buildPhases = (
 				8F79397F243157C400623E64 /* Sources */,
 				8F793980243157C400623E64 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = ImagePickerTings;
+			name = MemeMe;
 			productName = ImagePickerTings;
-			productReference = 8F793983243157C400623E64 /* ImagePickerTings.app */;
+			productReference = 8F793983243157C400623E64 /* MemeMe 1.0.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8F79397E243157C400623E64 /* Build configuration list for PBXProject "ImagePickerTings" */;
+			buildConfigurationList = 8F79397E243157C400623E64 /* Build configuration list for PBXProject "MemeMe" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F793982243157C400623E64 /* ImagePickerTings */,
+				8F793982243157C400623E64 /* MemeMe */,
 			);
 		};
 /* End PBXProject section */
@@ -141,6 +144,7 @@
 				8F79398B243157C400623E64 /* ViewController.swift in Sources */,
 				8F793987243157C400623E64 /* AppDelegate.swift in Sources */,
 				8F793989243157C400623E64 /* SceneDelegate.swift in Sources */,
+				8F79399B243455D700623E64 /* Meme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,13 +290,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69A2VJ4W6D;
-				INFOPLIST_FILE = ImagePickerTings/Info.plist;
+				INFOPLIST_FILE = MemeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewecatproductions.ImagePickerTings;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MemeMe 1.0";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,13 +308,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69A2VJ4W6D;
-				INFOPLIST_FILE = ImagePickerTings/Info.plist;
+				INFOPLIST_FILE = MemeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewecatproductions.ImagePickerTings;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MemeMe 1.0";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F79397E243157C400623E64 /* Build configuration list for PBXProject "ImagePickerTings" */ = {
+		8F79397E243157C400623E64 /* Build configuration list for PBXProject "MemeMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F793995243157C800623E64 /* Debug */,
@@ -328,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F793997243157C800623E64 /* Build configuration list for PBXNativeTarget "ImagePickerTings" */ = {
+		8F793997243157C800623E64 /* Build configuration list for PBXNativeTarget "MemeMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F793998243157C800623E64 /* Debug */,

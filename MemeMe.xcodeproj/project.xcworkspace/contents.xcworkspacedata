@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ImagePickerTings.xcodeproj">
+      location = "self:/Users/Selasi/Desktop/ImagePickerTings/MemeMe.xcodeproj">
    </FileRef>
 </Workspace>
