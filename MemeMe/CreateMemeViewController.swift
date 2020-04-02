@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var bottomTextEdit: UITextField!
     @IBOutlet weak var topTextEdit: UITextField!
@@ -28,33 +28,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func initializeDefaultViewSettings() {
-        let memeTextAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.strokeColor: UIColor.black,
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSAttributedString.Key.strokeWidth:  -2.5
-        ]
-            
-        bottomTextEdit.defaultTextAttributes = memeTextAttributes
-        topTextEdit.defaultTextAttributes = memeTextAttributes
-        
-        topTextEdit.textAlignment = .center
-        bottomTextEdit.textAlignment = .center
-        
-        bottomTextEdit.text = "BOTTOM"
-        topTextEdit.text = "TOP"
-        
+        setupTextFieldStyle(topTextEdit, defaultText: "TOP")
+        setupTextFieldStyle(bottomTextEdit, defaultText: "BOTTOM")
         imagePickerView.image = nil
-        
         shareMemeButton.isEnabled = false
-            
-        topTextEdit.delegate = self
-        bottomTextEdit.delegate = self
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+
+    }
+    
+    func setupTextFieldStyle(_ textField: UITextField, defaultText: String) {
+        let memeTextAttributes: [NSAttributedString.Key: Any] = [
+            .strokeColor: UIColor.black,
+            .foregroundColor: UIColor.white,
+            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            .strokeWidth:  -4.0
+        ]
+        
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
+        textField.text = ""
+        textField.placeholder = defaultText
+        textField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         subscribeToKeyboardNotifications()
     }
 
@@ -116,12 +114,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.text == "BOTTOM" || textField.text == "TOP" {
-            textField.text = ""
-        }
-    }
-
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -134,8 +126,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
-        topToolbar.isHidden = true
-        bottomToolbar.isHidden = true
+        hideToolbarsAndTextViews(true)
 
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -144,10 +135,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
 
         // Show toolbar and navbar
-        topToolbar.isHidden = false
-        bottomToolbar.isHidden = false
+        hideToolbarsAndTextViews(false)
 
         return memedImage
+    }
+    
+    func hideToolbarsAndTextViews(_ isHidden: Bool) {
+        topToolbar.isHidden = isHidden
+        bottomToolbar.isHidden = isHidden
+        
+        if isHidden {
+            if topTextEdit.text == "" {
+                topTextEdit.isHidden = isHidden
+            }
+            
+            if bottomTextEdit.text == "" {
+                bottomTextEdit.isHidden = isHidden
+            }
+        } else {
+            topTextEdit.isHidden = isHidden
+            bottomTextEdit.isHidden = isHidden
+        }
     }
 
     @IBAction func shareMeme(_ sender: Any) {
