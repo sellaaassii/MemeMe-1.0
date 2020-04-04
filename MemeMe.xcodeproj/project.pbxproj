@@ -14,6 +14,10 @@
 		8F793990243157C800623E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F79398F243157C800623E64 /* Assets.xcassets */; };
 		8F793993243157C800623E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F793991243157C800623E64 /* LaunchScreen.storyboard */; };
 		8F79399B243455D700623E64 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79399A243455D700623E64 /* Meme.swift */; };
+		8F8F99792437D9010069D9E7 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F99782437D9010069D9E7 /* MemeTableViewCell.swift */; };
+		8F8F997B2437DCCD0069D9E7 /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F997A2437DCCD0069D9E7 /* SentMemesCollectionViewController.swift */; };
+		8F8F997D2437DFFF0069D9E7 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F997C2437DFFF0069D9E7 /* MemeCollectionViewCell.swift */; };
+		8F8F9983243914FC0069D9E7 /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F9982243914FC0069D9E7 /* SentMemesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		8F793992243157C800623E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F793994243157C800623E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F79399A243455D700623E64 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		8F8F99782437D9010069D9E7 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
+		8F8F997A2437DCCD0069D9E7 /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SentMemesCollectionViewController.swift; path = "/Users/Selasi/Desktop/IOS Dev/MemeMe-1.0/MemeMe/SentMemesCollectionViewController.swift"; sourceTree = "<absolute>"; };
+		8F8F997C2437DFFF0069D9E7 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8F8F9982243914FC0069D9E7 /* SentMemesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +69,11 @@
 				8F793986243157C400623E64 /* AppDelegate.swift */,
 				8F793988243157C400623E64 /* SceneDelegate.swift */,
 				8F79398A243157C400623E64 /* CreateMemeViewController.swift */,
+				8F8F997A2437DCCD0069D9E7 /* SentMemesCollectionViewController.swift */,
 				8F79399A243455D700623E64 /* Meme.swift */,
+				8F8F997C2437DFFF0069D9E7 /* MemeCollectionViewCell.swift */,
+				8F8F99782437D9010069D9E7 /* MemeTableViewCell.swift */,
+				8F8F9982243914FC0069D9E7 /* SentMemesTableViewController.swift */,
 				8F79398C243157C400623E64 /* Main.storyboard */,
 				8F79398F243157C800623E64 /* Assets.xcassets */,
 				8F793991243157C800623E64 /* LaunchScreen.storyboard */,
@@ -142,8 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F79398B243157C400623E64 /* CreateMemeViewController.swift in Sources */,
+				8F8F9983243914FC0069D9E7 /* SentMemesTableViewController.swift in Sources */,
 				8F793987243157C400623E64 /* AppDelegate.swift in Sources */,
+				8F8F997B2437DCCD0069D9E7 /* SentMemesCollectionViewController.swift in Sources */,
 				8F793989243157C400623E64 /* SceneDelegate.swift in Sources */,
+				8F8F997D2437DFFF0069D9E7 /* MemeCollectionViewCell.swift in Sources */,
+				8F8F99792437D9010069D9E7 /* MemeTableViewCell.swift in Sources */,
 				8F79399B243455D700623E64 /* Meme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

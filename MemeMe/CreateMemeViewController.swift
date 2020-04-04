@@ -6,6 +6,12 @@
 //  Copyright © 2020 Ewe Cat Productions. All rights reserved.
 //
 
+//var memes: [Meme]! {
+//    let object = UIApplication.shared.delegate
+//    let appDeletgate = object as! AppDelegate
+//    return appDeletgate.memes
+//}
+
 import UIKit
 
 class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
@@ -122,6 +128,10 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     func save() {
         // Create the meme
         let meme = Meme(topText: topTextEdit.text!, bottomText: bottomTextEdit.text!, originalImage: imagePickerView.image!, memedImage: memedImage!)
+        
+        // Add it to the memes array in the Application Delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     func generateMemedImage() -> UIImage {
@@ -159,13 +169,14 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     @IBAction func shareMeme(_ sender: Any) {
-        memedImage = generateMemedImage()
-        let items = [memedImage]
+        self.memedImage = generateMemedImage()
+        let items = [self.memedImage]
         let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
         
         activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed:Bool, returnedItems:[Any]?, error: Error?) in
             if completed {
                 self.save()
+                self.dismiss(animated: true, completion: nil)
             }
         }
 
