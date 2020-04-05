@@ -31,7 +31,7 @@
 		8F793994243157C800623E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F79399A243455D700623E64 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		8F8F99782437D9010069D9E7 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
-		8F8F997A2437DCCD0069D9E7 /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SentMemesCollectionViewController.swift; path = "/Users/Selasi/Desktop/IOS Dev/MemeMe-1.0/MemeMe/SentMemesCollectionViewController.swift"; sourceTree = "<absolute>"; };
+		8F8F997A2437DCCD0069D9E7 /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SentMemesCollectionViewController.swift; path = "SentMemesCollectionViewController.swift"; sourceTree = "<absolute>"; };
 		8F8F997C2437DFFF0069D9E7 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F8F9982243914FC0069D9E7 /* SentMemesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
