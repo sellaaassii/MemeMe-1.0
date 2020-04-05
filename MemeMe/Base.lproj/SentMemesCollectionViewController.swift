@@ -53,9 +53,17 @@ class SentMemesCollectionViewController: UICollectionViewController {
          return memes.count
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailViewController = self.storyboard?.instantiateViewController(identifier: "MemeDetailViewController") as! MemeDetailViewController
+        detailViewController.meme = self.memes[(indexPath as NSIndexPath).row]
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         sentMemeCollectionView!.reloadData()
     }
+    
+    
 
 }

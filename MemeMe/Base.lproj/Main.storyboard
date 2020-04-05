@@ -105,6 +105,35 @@
             </objects>
             <point key="canvasLocation" x="1721.7391304347827" y="22.767857142857142"/>
         </scene>
+        <!--Meme Details-->
+        <scene sceneID="BT2-iu-y0r">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" title="Meme Details" id="xDn-mk-cYX" customClass="MemeDetailViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D11-F6-Sdh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="avu-07-P62">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="avu-07-P62" firstAttribute="top" secondItem="fWu-Ao-ees" secondAttribute="top" id="7Tw-Fs-jEW"/>
+                            <constraint firstItem="avu-07-P62" firstAttribute="trailing" secondItem="fWu-Ao-ees" secondAttribute="trailing" id="Ctg-ZW-HtT"/>
+                            <constraint firstItem="avu-07-P62" firstAttribute="bottom" secondItem="fWu-Ao-ees" secondAttribute="bottom" id="NLa-HC-7eq"/>
+                            <constraint firstItem="avu-07-P62" firstAttribute="leading" secondItem="fWu-Ao-ees" secondAttribute="leading" id="lrn-TR-nde"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fWu-Ao-ees"/>
+                    </view>
+                    <connections>
+                        <outlet property="createdMemeImageView" destination="avu-07-P62" id="fmM-e6-tBQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFd-LJ-fa1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142.0289855072465" y="372.99107142857139"/>
+        </scene>
         <!--Create Meme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
