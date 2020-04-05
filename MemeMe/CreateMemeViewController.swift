@@ -39,7 +39,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
         let memeTextAttributes: [NSAttributedString.Key: Any] = [
             .strokeColor: UIColor.black,
             .foregroundColor: UIColor.white,
-            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            .font: UIFont(name: "Impact", size: 40)!,
             .strokeWidth:  -4.0
         ]
         
@@ -72,7 +72,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
 
     @objc func keyboardWillShow(_ notification:Notification) {
         if bottomTextEdit.isEditing {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     

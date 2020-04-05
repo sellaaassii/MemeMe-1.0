@@ -18,6 +18,7 @@
 		8F8F998C243A49CD0069D9E7 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F99782437D9010069D9E7 /* MemeTableViewCell.swift */; };
 		8F8F998D243A49CD0069D9E7 /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F9982243914FC0069D9E7 /* SentMemesTableViewController.swift */; };
 		8F8F9990243A4DA60069D9E7 /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F9992243A4DA60069D9E7 /* SentMemesCollectionViewController.swift */; };
+		8F8F9994243A89650069D9E7 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F9993243A89650069D9E7 /* impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8F8F997C2437DFFF0069D9E7 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F8F9982243914FC0069D9E7 /* SentMemesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesTableViewController.swift; sourceTree = "<group>"; };
 		8F8F9991243A4DA60069D9E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/SentMemesCollectionViewController.swift; sourceTree = "<group>"; };
+		8F8F9993243A89650069D9E7 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				8F79398F243157C800623E64 /* Assets.xcassets */,
 				8F793991243157C800623E64 /* LaunchScreen.storyboard */,
 				8F793994243157C800623E64 /* Info.plist */,
+				8F8F9993243A89650069D9E7 /* impact.ttf */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8F9994243A89650069D9E7 /* impact.ttf in Resources */,
 				8F793993243157C800623E64 /* LaunchScreen.storyboard in Resources */,
 				8F793990243157C800623E64 /* Assets.xcassets in Resources */,
 				8F79398E243157C400623E64 /* Main.storyboard in Resources */,
