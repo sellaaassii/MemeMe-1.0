@@ -11,15 +11,19 @@ import UIKit
 
 class SentMemesTableViewController: UITableViewController {
     
+    @IBOutlet var sentMemeTableView: UITableView!
+    
     var memes: [Meme]! {
         let object = UIApplication.shared.delegate
         let appDeletgate = object as! AppDelegate
         return appDeletgate.memes
     }
-    @IBOutlet var sentMemeTableView: UITableView!
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        navigationController?.navigationBar.topItem?.title = "Sent Memes"
+        sentMemeTableView.register(MemeTableViewCell.self, forCellReuseIdentifier: "MemeTableViewCell")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,18 +31,30 @@ class SentMemesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell")!
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell") as! MemeTableViewCell
         let meme = memes[(indexPath as NSIndexPath).row]
         
-       // cell.imageView?.frame  =
-        cell.imageView?.image  = meme.memedImage
-        cell.largeContentTitle = meme.topText + "....." + meme.bottomText
+        var memeText: String = ""
+
+        if meme.topText != "" {
+            memeText = meme.topText
+        }
+        
+        if meme.bottomText != "" {
+            memeText += "....." + meme.bottomText
+        }
+        
+        cell.memeImageView.image = meme.memedImage
+        cell.memeText = memeText
+        cell.layoutSubviews()
+
         return cell
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
-        self.reloadInputViews()
-        self.sentMemeTableView.reloadData()
+        super.viewWillAppear(true)
+        self.sentMemeTableView!.reloadData()
     }
+
 }

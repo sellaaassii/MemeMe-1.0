@@ -6,12 +6,6 @@
 //  Copyright © 2020 Ewe Cat Productions. All rights reserved.
 //
 
-//var memes: [Meme]! {
-//    let object = UIApplication.shared.delegate
-//    let appDeletgate = object as! AppDelegate
-//    return appDeletgate.memes
-//}
-
 import UIKit
 
 class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
@@ -39,7 +33,6 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
         imagePickerView.image = nil
         shareMemeButton.isEnabled = false
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-
     }
     
     func setupTextFieldStyle(_ textField: UITextField, defaultText: String) {
@@ -90,6 +83,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     func getKeyboardHeight(_ notification:Notification) -> CGFloat {
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+
         return keyboardSize.cgRectValue.height
     }
 
@@ -122,6 +116,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+
         return true
     }
     
@@ -184,7 +179,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func cancelEditing(_ sender: Any) {
-        initializeDefaultViewSettings()
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
